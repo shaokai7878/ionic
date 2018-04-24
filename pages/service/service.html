@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="yel">
+    <ion-title>找服务</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="yel">
+    <ion-searchbar placeholder="输入你想找的信息，试试吧"></ion-searchbar>
+</ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <div *ngFor="let item of servicelist">
+            <ion-list-header class="title-number">{{ item.title }} -- {{ item.number }}</ion-list-header>
+            <ion-item >
+              <div class="list-icon">
+                <ion-avatar item-start>
+                  <img [src]="item.icon">
+                </ion-avatar>
+              </div>
+              <div class="list-content-left">
+                <span class="list-word">地区：</span><span>{{ item.area }}</span><br>
+                <span class="list-word">来源：</span><span>{{ item.source }}</span><br>
+                <span class="list-word">类型：</span><span>{{ item.type }}</span>
+              </div>
+              <div class="list-content-middle">
+                <span class="big-word">{{ item.accont }}</span><br>
+                <span class="list-word">总金额</span>
+              </div>
+              <div class="list-content-right">
+                <span class="big-word">{{ item.exchange }}</span><br>
+                <span class="list-word">转让价</span>
+              </div>
+            </ion-item>   
+        </div>
+      </ion-list>
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+          <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+      <p>{{dixian}}</p>
+</ion-content>

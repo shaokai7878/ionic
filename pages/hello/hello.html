@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="yel">
+    <ion-title >我的</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="nav">
+    <img src="assets/imgs/wode.png">
+    <button ion-button color="yel" (click)="goSetDetail()" style="float:right;">编辑资料</button>
+    <h2>张扬</h2>
+    <p class="p1">北京市&nbsp;&nbsp;|&nbsp;&nbsp;海淀区</p>
+    <p class="p2">北京资芽网络科技有限公司</p>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of items"(click)="goSetDetail()">
+        <ion-avatar item-start>
+            <img src="{{item.shezhi}}">
+          </ion-avatar>  
+          <p class="biaoti">{{ item.title }}</p>
+    </ion-item>
+  </ion-list>
+  <!-- <button ion-button (click)="takePhoto()">照相</button>
+  <img src="{{imgSrc}}"> -->
+</ion-content>

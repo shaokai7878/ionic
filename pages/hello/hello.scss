@@ -1,0 +1,32 @@
+page-hello {
+    .biaoti{
+        font-size: 23px;
+        color: #000;
+        margin-left: 40px;
+    }
+    .nav img{
+        width: 85px;
+        height: 85px;
+        margin: 0 0 0 100px;
+    }
+    .nav h2{
+        margin: 0;
+    }
+    .nav .p2{
+        color:#999999;
+        margin: 0;
+        font-size: 2.0rem;
+    }
+    .nav .p1{
+        color: #cccccc;
+        margin: 0;
+    }
+    .nav{
+        text-align: center;
+        padding: 0 auto;
+        margin:5px;
+        height: auto;
+        border-bottom: 1px solid #999999;
+        width: 100%;
+    }
+}

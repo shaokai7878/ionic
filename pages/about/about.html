@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="yel">
+    <ion-title>选择发布类型</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+    <ion-segment [(ngModel)]="search"color="yel">
+        <ion-segment-button value="infor">信息类</ion-segment-button>
+        <ion-segment-button value="service">服务类</ion-segment-button>
+      </ion-segment>
+  
+      <div [ngSwitch]="search" >
+        <div *ngSwitchCase="'infor'" (click)="goAboutDetail()">
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngFor="let item of infor.slice(0,4)" class="infor">
+                  <img [src]="item.icon">
+                  <p>{{ item.title }}</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col *ngFor="let item of infor.slice(4,8)" class="infor">
+                    <img [src]="item.icon">
+                    <p>{{ item.title }}</p>
+                  </ion-col>
+              </ion-row>
+            </ion-grid>  
+        </div>
+        <div *ngSwitchCase="'infor'" (click)="goAboutDetail()">
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngFor="let item of infor.slice(0,4)" class="infor">
+                  <img [src]="item.icon">
+                  <p>{{ item.title }}</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>  
+        </div>
+        <div *ngSwitchCase="'service'" (click)="goAboutDetail()">
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngFor="let item of infor.slice(4,8)" class="service">
+                  <img [src]="item.icon">
+                  <p>{{ item.title }}</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col *ngFor="let item of infor.slice(0,4)" class="service">
+                  <img [src]="item.icon">
+                  <p>{{ item.title }}</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid> 
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngFor="let item of infor.slice(4,8)" class="service">
+                  <img [src]="item.icon">
+                  <p>{{ item.title }}</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid> 
+        </div>
+      </div>
+</ion-content>
